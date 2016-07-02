@@ -1,0 +1,27 @@
+
+using UnityEngine;
+using System.Collections;
+
+public class ExampleReadLine : MonoBehaviour {
+
+	// Use this for initialization
+	void Start () {
+	
+	}
+	
+	// Update is called once per frame
+	void Update () {
+	
+	}
+    public void readline (string root)
+    {
+        string line;
+        System.IO.StreamReader file = new System.IO.StreamReader(root);
+        while((line = file.ReadLine()) != null)
+        {
+            Debug.Log(line);    # This code printing everyline into the Unity console
+                                # You can write anything in this while loop to do something to the line you read
+        }
+        file.Close();
+    }
+}
